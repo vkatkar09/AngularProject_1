@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            
+            <div class="card" >
+                <div class="card-header bg-primary text-white">Product List Details {{productDetailsData.productId}} - {{productDetailsData.product}}</div>
+                <div class="card-body">
+                  
+                    <div class="container">
+                        <div class="row inline">
+                            ID: {{productDetailsData.productId}} {{productDetailsData.product}}, {{productDetailsData.price}}, {{productDetailsData.code}}, {{productDetailsData.available}}, {{productDetailsData.rating}}
+                        </div>
+                        <div class="row">
+                            <img src="{{productDetailsData.productImage}}" >
+                        </div>
+                        <div class="row">
+                            <button type="button" class="btn btn-primary" 
+                                    (click)="backFun()">Back</button>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div class="card-footer">Created By Vk ©2019</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
