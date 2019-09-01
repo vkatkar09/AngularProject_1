@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { ProductServices } from '../../shared/services/product.services';
 import {Router} from '@angular/router';
+import { Iproducts } from '../../shared/model/product';
 
 @Component({
   selector: 'app-product-details',
@@ -11,7 +12,7 @@ import {Router} from '@angular/router';
 export class ProductDetailsComponent implements OnInit {
 
   public productDetailsID;
-  public productDetailsData;
+  public productDetailsData :Iproducts;
   constructor(private AR : ActivatedRoute, private productServices : ProductServices, private router: Router) { }
 
   ngOnInit() {
@@ -23,7 +24,7 @@ export class ProductDetailsComponent implements OnInit {
 
     this.productServices.Product()
     .subscribe(data =>{
-      console.log(this.productDetailsID)
+      //console.log(this.productDetailsID)
       this.productDetailsData = data.find(product => product.productId === parseInt(this.productDetailsID));
     
     })
